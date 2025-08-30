@@ -29,4 +29,8 @@ El diseño de la aplicación debe ser responsive y adaptarse correctamente a dif
 | HTML Semántico     | 0.5     |
 | Funcionalidad      | 3       |
 
+--------------------------------------------------------------------------------
+Tarea DOM:
+- Ricardo Plazas Rivas
+- Link despliegue: https://dsaw-2025-ii.github.io/dom-manipulation-Rick-Plazas/
 
