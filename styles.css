@@ -1,0 +1,74 @@
+:root {font-size: 16px;} /*Ajusta el tamaño base de la fuente para toda la página*/
+
+* {box-sizing: border-box;} /*Hace que padding y border dentro del ancho y alto total de cada elemento*/
+
+body { /*Quita márgenes por defecto, aplica tipografía del sistema y mejora legibilidad */
+    margin: 0;
+    font-family: system-ui, sans-serif; line-height: 1.4;
+}
+
+main { /*Centra el contenido principal y limita el ancho en pantallas grandes */
+    padding: 1rem;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+form{ /*Formulario con grid: input ocupa todo el espacio y el botón se adapta*/
+    display: grid;
+    grid-template-columns: 1fr auto; /*1fr: ancho flexible, auto: botón*/
+    gap: 0.5rem; /*Espacio entre columnas*/
+    align-items: center; /*Alinear en el centro verticalmente*/ 
+}
+
+/* La etiqueta (label) ocupa toda la fila, arriba del input */
+label { grid-column: 1 / -1; font-size: .9rem; color: #555; }
+
+/* Estilo del campo de texto */
+input[type="text"] { 
+  padding: .75rem; 
+  border: 1px solid #ccc; 
+  border-radius: .5rem; 
+}
+
+/* Estilo de los botones generales (agregar, eliminar, etc.) */
+button { 
+  padding: .75rem 1rem; 
+  border: none; 
+  border-radius: .5rem; 
+  cursor: pointer; /* mano al pasar encima */
+}
+
+/* Quita viñetas de la lista UL y margina hacia arriba */
+ul { list-style: none; padding: 0; margin-top: 1rem; }
+
+/* Cada tarea es un grid con 3 columnas: checkbox, texto y botón eliminar */
+.task {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* auto = checkbox/botón, 1fr = texto */
+  gap: .5rem;
+  align-items: center; /* centra verticalmente */
+  padding: .75rem;
+  border: 1px solid #e5e5e5;
+  border-radius: .5rem;
+  margin-bottom: .5rem;
+  background: #fff;
+}
+
+/* Cuando la tarea está completada, se tacha el texto y baja la opacidad */
+.task.completed .text { 
+  text-decoration: line-through; 
+  opacity: .6; 
+}
+
+/***** Tablet ≥768px *****/
+/* Ajusta espacios en pantallas tipo tablet */
+@media (min-width: 768px) {
+  main { padding: 2rem; }
+  form { grid-template-columns: 1fr auto; gap: .75rem; }
+}
+
+/***** Desktop ≥1024px *****/
+/* En pantallas grandes, se permite un ancho máximo más amplio */
+@media (min-width: 1024px) {
+  main { max-width: 56rem; }
+}

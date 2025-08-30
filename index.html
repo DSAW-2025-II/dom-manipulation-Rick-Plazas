@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Mi TODO list</h1>
-    <script src="scripts/script.js"></script>
-  </body>
+
+<html lang="es">
+<head >
+    <meta charset="tf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title >Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body >
+    <header >
+        <h1> Lista de Tareas </h1>
+    </header>
+
+    <main > <!--Formulario para crear tareas-->
+        <form id="task-form" aria-label="Agregar nueva tarea">
+            <label for="task-input"> Nueva tarea </label>
+            <input id="task-input" name="task" type="text" placeholder="Escriba una tarea" required/>
+
+            <button type="submit">Agregar</button>
+        </form> 
+        <!--Lista de tareas-->
+
+        <section aria-live="polite" aria-label="Tareas">
+            <ul id="task-list"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <small>Hecho por Rick Plazas</small>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+
 </html>
